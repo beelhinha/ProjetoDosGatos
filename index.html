@@ -232,12 +232,13 @@
                     <p>Bel é uma gatinha tímida e escondida, adora comer sachê de salmão. Geralmente gosta de ficar em baixo da cama ou na poltrona.</p>
                 </div>
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <section id="contact" class="contact-section">
                 <h2>Contato</h2>
                 <form id="contact-form">
-                    <input type="text" id="name" name="name" placeholder="Seu nome" required>
-                    <input type="email" id="email" name="email" placeholder="Seu email" required>
-                    <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+                    <input type="text" id="name" placeholder="Nome">
+                    <input type="email" id="email" placeholder="Email">
+                    <textarea id="message" placeholder="Mensagem"></textarea>
                     <button type="submit">Enviar</button>
                 </form>
             </section>
@@ -253,11 +254,19 @@
             const message = document.getElementById('message').value;
 
             if (name && email && message) {
-                alert('Mensagem enviada com sucesso!');
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sucesso!',
+                    text: 'Mensagem enviada com sucesso!',
+                });
                 // Aqui você pode adicionar o código para enviar os dados para o servidor
                 document.getElementById('contact-form').reset();
             } else {
-                alert('Por favor, preencha todos os campos.');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Erro!',
+                    text: 'Por favor, preencha todos os campos.',
+                });
             }
         });
     </script>
