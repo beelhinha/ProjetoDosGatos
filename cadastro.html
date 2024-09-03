@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADOTE</title>
+    <title>CADASTRO</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
         /* Estilos gerais */
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #8080f5, #e25aae);
+            background: linear-gradient(to right, #5c5ca3, #ad80b6);
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,29 +20,25 @@
             height: 100vh;
         }
 
-        /* Formulário  */
+        /* Formulário de cadastro */
         .register-container {
-            background: linear-gradient(to right, #bfbff1, #df86bd);
+            background: linear-gradient(to right, #8b91ee, #c980df);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: 350px;
             text-align: center;
         }
 
-        p {
-            text-align: center;
-            font-size: 16;
-            color:rgba(0, 0, 0, 0.507);
-        }
-
-
         .register-container h2 {
-            color: #6e77ebc4;
+            color: #442f75;
             margin-bottom: 20px;
             font-family: 'Helvetica', sans-serif;
         }
 
+        p {
+            color: rgb(104, 103, 103);
+        }
         .register-container input {
             width: 100%;
             padding: 5px;
@@ -55,7 +51,7 @@
         .register-container button {
             width: 100%;
             padding: 12px;
-            background-color: #8b84ec;
+            background-color: #200f50;
             color: #dbdbdb;
             border: none;
             border-radius: 5px;
@@ -65,18 +61,17 @@
         }
 
         .register-container button:hover {
-            background-color: #e681b0;
+            background-color: #684f79;
         }
     </style>
     <div class="register-container">
         <h2>SMIBEE</h2>
-        <p>Entre na sua conta, mas agora com <br>o nome do bichinho desejado</p>
+        <p>Faça seu cadastro</p>
         <form id="register-form">
             <input type="text" id="username" name="username" placeholder="Nome de usuário" required>
-            <input type="text" id="username" name="username" placeholder="Nome do bichinho" required>
             <input type="email" id="email" name="email" placeholder="Email" required>
             <input type="password" id="password" name="password" placeholder="Senha" required>
-            <button type="submit">Enviar</button>
+            <button type="submit">Cadastrar</button>
         </form>
     </div>
     <script>

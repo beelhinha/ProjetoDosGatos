@@ -10,8 +10,8 @@
     <style>
         /* Estilos gerais */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #aae79d, #e25aae);
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,45 +20,58 @@
             height: 100vh;
         }
 
-        /* Formulário de login */
+        /* Formulário  */
         .login-container {
-            background-color: rgb(255, 255, 255);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            background: linear-gradient(to right, #bbdbb8, #e99ad5);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589);
+            width: 350px;
             text-align: center;
         }
 
+        p {
+            text-align: center;
+            font-size: 16;
+            color:rgba(0, 0, 0, 0.507);
+        }
+
+
         .login-container h2 {
-            color: #4CAF50;
+            color: #00000094;
             margin-bottom: 20px;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 25px;
         }
 
         .login-container input {
             width: 100%;
-            padding: 10px;
+            padding: 5px;
             margin: 10px 0;
-            border: 1px solid #000000;
-            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
         .login-container button {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: rgb(255, 255, 255);
+            padding: 12px;
+            background-color: #4c9e65b9;
+            color: #dbdbdb;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
 
         .login-container button:hover {
-            background-color: #45a049;
+            background-color: #e681b0;
         }
     </style>
     <div class="login-container">
         <h2>Login</h2>
+        <p>Digite suas informações</p>
         <form id="login-form">
             <input type="text" id="username" name="username" placeholder="Nome de usuário" required>
             <input type="password" id="password" name="password" placeholder="Senha" required>

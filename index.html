@@ -10,110 +10,128 @@
     <style>
         /* Estilos gerais */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #c58ecc, #9144c4);
             margin: 0;
             padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-
+    
         /* Cabeçalho */
         header {
-            background-color: #9c9c93;
+            background: linear-gradient(to right, #8f7ab6, #dbb4c0);
             color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 1rem;
             text-align: center;
+            font-size: 1.5rem;
+            width: 100%;
         }
-
+    
         /* Navegação */
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: #e8aaee;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
-
+    
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
-
+    
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #adc2eb;
+            color: #fff;
         }
-
+    
         /* Conteúdo principal */
         main {
             padding: 20px;
+            width: 80%;
+            max-width: 1200px;
         }
-
+    
         /* Seção de adoção */
         .adoption-section {
-            background-color: white;
+            background: linear-gradient(to right, #a5e2aa, #d39069);
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
+    
         .adoption-section h2 {
-            color: #4CAF50;
+            color: #161616;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
-
+    
         /* Cartões de animais */
         .animal-card {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-
+    
         .animal-card .card {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: calc(25% - 20px);
             padding: 20px;
             box-sizing: border-box;
+            transition: transform 0.3s ease;
         }
-
-        h1 {
-            font-size: 40px;
+    
+        .animal-card .card:hover {
+            transform: translateY(-10px);
         }
-
-        h2 {
-            font-size: 15px;
-        }
-
+    
         .animal-card .card img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
         }
-
+    
         .animal-card .card h3 {
             color: #333;
+            font-size: 1.2rem;
+            margin: 10px 0;
         }
-
+    
         .animal-card .card p {
             color: #666;
+            font-size: 1rem;
         }
-
+    
         /* Formulário de contato */
         .contact-section {
-            background-color: white;
+            background: linear-gradient(to right, #8f7ab6, #dbb4c0);
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
-
+    
         .contact-section h2 {
-            color: #4CAF50;
+            color: #fff;
             text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
-
+    
         .contact-section form {
             display: flex;
             flex-direction: column;
@@ -121,48 +139,49 @@
             max-width: 600px;
             margin: 0 auto;
         }
-
+    
         .contact-section form input,
         .contact-section form textarea {
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
-            font-size: 16px;
+            font-size: 1rem;
         }
-
+    
         .contact-section form button {
             padding: 15px;
-            background-color: #4CAF50;
+            background: linear-gradient(to right, #251a38, #dbb4c0);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1rem;
             transition: background-color 0.3s ease;
         }
-
+    
         .contact-section form button:hover {
             background-color: #45a049;
         }
-
+    
         .contact-section form input:focus,
         .contact-section form textarea:focus {
             border-color: #4CAF50;
             outline: none;
             box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
         }
-
+    
         /* Rodapé */
         footer {
             background-color: #333;
-            color: rgb(255, 255, 255);
+            color: #fff;
             text-align: center;
-            padding: 5px;
-            position: fixed;
-            bottom: 0;
+            padding: 10px;
             width: 100%;
+            position: relative;
+            bottom: 0;
         }
     </style>
+    
     <header>
         <h1>Smibee</h1>
         <h2>Adote aqui o seu melhor amigo!</h2>
@@ -170,7 +189,8 @@
     <nav>
         <ul>
                     <a href="login.html"><b>LOGIN</b></a>
-                    <a href="index.html"><b>ADOTE UM AMIGO</b></a>
+                    <a href="cadastro.html"><b>CADASTRO</b></a>
+                    <a href="adote.html"><b>ADOTE UM AMIGO</b></a>
         </ul>
     </nav>
     <main>
@@ -178,8 +198,8 @@
             <h2>Sobre Nós</h2>
             <p>Somos uma organização dedicada a encontrar lares amorosos para animais necessitados.</p>
         </section>
-        <section id="adoption" class="adoption-section">
-            <h2>Animais para Adoção</h2>
+
+            <h2>ANIMAIS PARA ADOÇÃO</h2>
             <div class="animal-card">
                 <div class="card">
                     <img src="./img/rex.jpeg" alt="Cachorro">
