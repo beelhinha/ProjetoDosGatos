@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smibee</title>
     <link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 </head>
 <body>
     <style>
-        /* Estilos gerais */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #c58ecc, #9144c4);
-            margin: 0;
-            padding: 0;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(270deg, #c58ecc, #7db4d4);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
     
         /* Cabeçalho */
         header {
-            background: linear-gradient(to right, #8f7ab6, #dbb4c0);
-            color: rgb(59, 34, 73);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
+            background: linear-gradient(to right, #6c76cc, #ceb4bc);
+            padding: -6rem;
             text-align: center;
             font-size: 1.5rem;
             width: 100%;
@@ -35,8 +43,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #e8aaee;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #584eac;
             width: 100%;
         }
     
@@ -49,7 +56,7 @@
         }
     
         nav a:hover {
-            background-color: #adc2eb;
+            background-color: #f1d7d7;
             color: #fff;
         }
     
@@ -65,8 +72,6 @@
             background: linear-gradient(to right, #a5e2aa, #d39069);
             padding: 20px;
             margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     
         .adoption-section h2 {
@@ -121,7 +126,6 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 100%;
         }
     
@@ -169,11 +173,7 @@
             outline: none;
             box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
         }
-        
-        h2 {
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-            width: 100%;
-        }
+
     
         /* Rodapé */
         footer {
@@ -189,7 +189,7 @@
     
     <header>
         <h1>Smibee</h1>
-        <h2>Adote aqui o seu melhor amigo!</h2>
+        <p>Adote aqui o seu melhor amigo!</p>
     </header>
     <nav>
         <ul>
@@ -199,10 +199,6 @@
         </ul>
     </nav>
     <main>
-        <section id="home">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma organização dedicada a encontrar lares amorosos para animais necessitados.</p>
-        </section>
 
             <h2>ANIMAIS PARA ADOÇÃO</h2>
             <div class="animal-card">
@@ -258,6 +254,11 @@
                 </form>
             </section>
     </main>
+    <section id="home">
+        <h2>Sobre nós</h2>
+        <p>Somos uma organização dedicada a encontrar lares amorosos para animais necessitados.<br> Também vendemos produtos e acompanhamos para que tudo dê certo na adoção dos bichinhos!</p>
+    </section>
+
     <footer>
         <p>© 2024 Site de Adoção. Todos os direitos reservados.</p>
     </footer>

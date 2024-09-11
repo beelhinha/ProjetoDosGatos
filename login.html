@@ -10,64 +10,75 @@
     <style>
         /* Estilos gerais */
         body {
-            background: linear-gradient(to right, #aae79d, #e25aae);
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: linear-gradient(270deg, #aae79d, #e25aae);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
         }
-
-        /* Formulário  */
+    
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    
+        /* Formulário */
         .login-container {
-            background: linear-gradient(to right, #bbdbb8, #e99ad5);
+            background: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589);
+            box-shadow: 10 10px 20px rgba(0, 0, 0, 0.5);
             width: 350px;
             text-align: center;
         }
-
+    
         p {
             text-align: center;
-            font-size: 16;
-            color:rgba(0, 0, 0, 0.507);
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.6);
         }
-
-
+    
         .login-container h2 {
-            color: #00000094;
+            color: #333;
             margin-bottom: 20px;
             font-family: 'Didot', serif;
             font-size: 25px;
         }
-
+    
         .login-container input {
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             margin: 10px 0;
-            border: 1px solid #e6e6e6;
+            position: relative;
+            margin-right: 0px;
+            border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
+            box-sizing: border-box;
         }
-
+    
         .login-container button {
             width: 100%;
             padding: 12px;
-            background-color: #4c9e65b9;
-            color: #dbdbdb;
+            background-color: #4c9e65;
+            color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
-
+    
         .login-container button:hover {
-            background-color: #e681b0;
+            background-color: #3b7a50;
         }
     </style>
+    
     <div class="login-container">
         <h2>LOGIN</h2>
         <p>Digite suas informações</p>
